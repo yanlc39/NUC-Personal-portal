@@ -7,4 +7,3 @@ if __name__ == '__main__':
     # 密码为 http://zhzb.nuc.edu.cn/cas/login 门户密码
     a = nLg('学号', '密码')
     print(gtt(a).getResult())
-
