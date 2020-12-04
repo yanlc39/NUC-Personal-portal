@@ -16,7 +16,7 @@ class ExamTimeTable(object):
                 'Cookie': 'route=cedbb6d83382d4dc66cdc06735dd1eb8; JSESSIONID=28660AA2B69AF2EA7AC862D2AB97C493'
         }
 
-        self.__result = requests.get(url=self.__url, headers=self.__header, timeout=2).text
+        self.__result = requests.get(url=self.__url, headers=self.__header, timeout=2).json()
 
         print(self.__url)
         print(self.__result)
