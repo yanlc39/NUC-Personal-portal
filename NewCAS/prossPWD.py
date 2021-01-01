@@ -22,7 +22,7 @@ class EncodePWD(object):
     def __init__(self, data: PublicKey, pwd):
         self.__url__BackUP = 'https://whispering-furry-charger.glitch.me/encode'
         # self.__url = 'http://127.0.0.1:6562/encode'
-        self.__url = 'http://114.116.227.127:6562/encode'
+        self.__url = 'http://10.101.163.66:6562/encode'
         a = ''
         for i in list(reversed(pwd)):
             a += i
@@ -38,7 +38,7 @@ class EncodePWD(object):
     def __getResult(self):
         try:
             self.__result = requests.post(url=self.__url, json=self.__data).json()['encoded']
-        except ConnectionError as e:
+        except:
             self.__result = requests.post(url=self.__url__BackUP, json=self.__data, timeout=10).json()['encoded']
             print("尝试使用备用接口中...")
 

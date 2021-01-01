@@ -11,7 +11,7 @@ class GetTestTime(object):
 
     def getResult(self):
         resultDict = {
-            'items':[]
+            'items': []
         }
         for i in self.__result:
             if '不可查' not in i['kssj']:
